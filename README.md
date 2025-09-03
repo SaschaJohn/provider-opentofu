@@ -5,7 +5,7 @@ can run Terraform code (HCL), using the OpenTofu fork, and enables defining new 
 that are composed of a mix of 'native' Crossplane managed resources and your
 existing Terraform modules.
 
-The provider adds support for a `Workspace` managed resource that
+The provider adds support for a `Workspace` managed resource thatr
 represents an OpenTofu workspace. The configuration of each workspace may be
 either fetched from a remote source (e.g. git), or simply specified inline.
 
