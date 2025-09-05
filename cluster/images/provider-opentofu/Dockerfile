@@ -19,5 +19,9 @@ RUN curl -s -L https://github.com/opentofu/opentofu/releases/download/v${OPENTOF
 # As of Crossplane v1.3.0 provider controllers run as UID 2000.
 # https://github.com/crossplane/crossplane/blob/v1.3.0/internal/controller/pkg/revision/deployment.go#L32
 
+RUN mkdir -p /home/user2000 \
+  && chown 2000:2000 /home/user2000 \ 
+  && useradd -u 2000 -d /home/user2000 -m user2000
+  
 USER 65532
 ENTRYPOINT ["crossplane-opentofu-provider"]
