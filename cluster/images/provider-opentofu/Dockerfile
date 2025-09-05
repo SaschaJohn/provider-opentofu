@@ -21,7 +21,7 @@ RUN curl -s -L https://github.com/opentofu/opentofu/releases/download/v${OPENTOF
 
 RUN mkdir -p /home/user2000 \
   && chown 2000:2000 /home/user2000 \ 
-  && adduser -u 2000 -h /home/user2000 user2000
+  && adduser -D -u 2000 -h /home/user2000 user2000
   
 USER 65532
 ENTRYPOINT ["crossplane-opentofu-provider"]
